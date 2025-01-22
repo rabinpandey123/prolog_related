@@ -1,0 +1,18 @@
+
+male(john).
+male(mary).
+male(mike).
+female(sara).
+female(anna).
+
+%Define love facts
+loves(john, mary).
+loves(mary, mike).
+loves(mike, sara).
+loves(anna, mary).
+
+% Jealousy rule
+jealous(X, Y) :-
+    loves(X, Z),
+    loves(Y, Z),
+    X \= Y.

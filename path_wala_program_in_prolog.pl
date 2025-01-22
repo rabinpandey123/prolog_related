@@ -1,0 +1,46 @@
+edge(k,b).
+edge(k,s).
+edge(s,h).
+edge(h,c).
+edge(c,a).
+edge(b,g).
+edge(g,a).
+edge(b,r).
+edge(s,r).
+edge(k,l).
+edge(l,r).
+edge(r,a).
+
+route(V1,V2):-
+
+    edge(V1,V2),
+     write(V1),
+     write('->'),
+     write(V2).
+
+route(V1,V2):-
+    edge(V1,Commonvertex1),
+    edge(Commonvertex1,Commonvertex2),
+    edge(Commonvertex2,V2),
+     write(V1),
+     write('->'),
+     write(Commonvertex1),
+
+      write('->'),
+     write(Commonvertex2),
+     write('->'),
+     write(V2).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
